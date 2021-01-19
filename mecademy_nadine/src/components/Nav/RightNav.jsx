@@ -2,9 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Ul = styled.ul`
+  margin: auto;
   list-style: none;
   display: flex;
+  width: 60%;
   flex-flow: row nowrap;
+  justify-content: space-around;
+
 
   li {
     padding: 18px 10px;
