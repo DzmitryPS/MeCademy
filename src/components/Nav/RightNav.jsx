@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import LogoSrc from './images/Logo.PNG';
 
 const Ul = styled.ul`
   margin: auto;
@@ -13,6 +14,7 @@ const Ul = styled.ul`
   li {
     padding: 18px 10px;
   }
+
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
@@ -32,14 +34,21 @@ const Ul = styled.ul`
   }
 `;
 
+const Logo = styled.img`
+    width: 130px;
+    height: 40px;
+    margin: 10px;
+    
+`;
+
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <li>Home</li>
+       <Logo src={LogoSrc} />
       <li>About</li>
-      <li>Team</li>
-      <li>Info</li>
       <li>Registration</li>
+      <li>Couches</li>
+      <li>Contact US</li>
     </Ul>
   )
 }
