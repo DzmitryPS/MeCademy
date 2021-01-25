@@ -2,12 +2,12 @@ import React from 'react';
 import MetaDecorator from '../MetaDecorator/MetaDecorator';
 
 
-const Contact = () => {
+const Program = () => {
     return (
         <div>
              <MetaDecorator
-             description='Here is Contact Page'
-             title='My Contact Page'
+             description='Here is Program Page'
+             title='My Program Page'
              />
             
             <p>Whats up dude</p>
@@ -15,4 +15,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Program

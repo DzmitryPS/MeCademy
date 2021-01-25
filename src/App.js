@@ -6,7 +6,8 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Registration from './components/Registration/Registration';
 import Couches from './components/Couches/Couches';
-import Contact from './components/Contact/Contact';
+import Program from './components/Program/Program';
+
 
 function App() {
   return (
@@ -25,8 +26,8 @@ function App() {
         <Route path='/Couches'
         render={props=> <Couches {...props}/>}
         />
-        <Route path='/Contact'
-        render={props=> <Contact {...props}/>}
+        <Route path='/Program'
+        render={props=> <Program {...props}/>}
         />
       </Switch>
       
