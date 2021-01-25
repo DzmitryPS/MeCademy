@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import LogoSrc from './images/Logo.PNG';
+import {Link} from 'react-router-dom';
 
 const Ul = styled.ul`
   margin: auto;
@@ -17,6 +18,9 @@ const Ul = styled.ul`
     font-size: 19px;
     height: 100%;
   }
+  
+
+  
 
 
   @media (max-width: 1000px) {
@@ -50,11 +54,12 @@ const Ul = styled.ul`
     @media (max-width: 768px) {
       cursor: pointer;
       display:block;
-      height: 5px;
+      height: 40px;
       background-color:#4B9FA5;
      border-radius: 6px;
      text-align: center;
-     padding-top: 10px;
+     padding-top: 6px;
+     
      color: white;
      transition: background 0.5s ease;
     }
@@ -78,18 +83,25 @@ const Ul = styled.ul`
 const Logo = styled.img`
     width: 130px;
     height: 40px;
-    margin: 10px auto;
-
-    @media (max-width: 1000px) {
-      margin-left: 25px;
-      
-    }
-    @media (max-width: 768px) {
-      margin: auto;
-      
-    }
-    
 `;
+
+const LogoDiv =styled.div`
+width: 130px;
+height: 40px;
+margin: 10px auto 10px 70px;
+
+
+@media (max-width: 1000px) {
+  margin: 10px auto 10px 70px;
+  
+}
+
+@media (max-width: 768px) {
+  margin: 10px auto;
+}
+
+`
+
 
 const RegBtn = styled.button`
     cursor: pointer;
@@ -122,13 +134,13 @@ const RegBtn = styled.button`
 const RightNav = ({ open }) => {
   return (
     <>
-    <Logo src={LogoSrc} />
+    <LogoDiv><Link to='/'><Logo src={LogoSrc} /></Link></LogoDiv>
     <Ul open={open}>
       <li className='reg_btn'>Registration<i class="fas fa-arrow-right"></i></li>
-      <li>About</li>
-      <li>Registration</li>
-      <li>Couches</li>
-      <li>Contact Us</li>
+      <li><Link to='/About'>About</Link></li>
+      <li><Link to='/Registration'>Registration</Link></li>
+      <li><Link to='/Couches'>Couches</Link></li>
+      <li><Link to='/Contact'>Contact Us</Link></li>
      
     </Ul>
     <RegBtn>Registration</RegBtn>
