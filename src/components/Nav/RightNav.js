@@ -16,7 +16,7 @@ const Ul = styled.ul`
   li {
     padding: 18px 10px;
     letter-spacing: 0.84px;
-    font-family: 'Yusei Magic', sans-serif;
+    font-family: 'Big Shoulders Stencil Text', cursive;
     height: 100%;
     transition: 0.3s ease-in;
 
@@ -31,10 +31,6 @@ const Ul = styled.ul`
     color: ${(props) => props.open  &&  'black'} ; 
     
   }
-  
-
-  
-
 
   @media (max-width: 1000px) {
 
@@ -73,7 +69,7 @@ const Ul = styled.ul`
      text-align: center;
      padding-top: 6px;
      margin-top:25px;
-     
+     font-size: 19px;
      color: white;
      transition: background 0.5s ease;
     }
@@ -122,7 +118,7 @@ const RegBtn = styled.button`
     background-color: ${(props) => props.open  &&  '#4B9FA5'} ; 
     border: none;
     border-radius: 50px;
-    font-family: 'Yusei Magic', sans-serif;
+    font-family: 'Big Shoulders Stencil Text', cursive;
     font-size: 16px;
     color:  ${(props)=> props.isHover ? 'white' : 'black'};
     color: ${(props) => props.open  &&  'white'} ; 
