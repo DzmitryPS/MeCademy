@@ -1,8 +1,6 @@
 import React from 'react'
 import MetaDecorator from '../MetaDecorator/MetaDecorator';
-import TypeformRight from './components/Typeform_Widget';
-import Typeform from './components/Typeform4';
-import TypeformFullScreen from './components/Typeform4';
+import TypeformRight from './Typeform_Widget/index';
 
 const Registration = () => {
     return (
