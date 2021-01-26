@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import RightNav from './RightNav';
-
+import {MyContext} from '../Context/MyContext';
 
 
 const StyledBurger = styled.div`
@@ -23,8 +23,8 @@ const StyledBurger = styled.div`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => open ? '#ccc' : '#333'};
-    border-radius: 10px;
+    background-color: ${({ open }) => open  ? '#ccc' : '#333'};      
+    
     transform-origin: 1px;
     transition: all 0.3s linear;
 
@@ -40,15 +40,20 @@ const StyledBurger = styled.div`
     &:nth-child(3) {
       transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
+
+    @media (max-width: 1000px) {
+    background-color: ${(props)=> props.isHover ? 'black' : 'white'};
+    background-color: ${(props) => props.open  &&  'black'} ; 
+  }
   }
 `;
 
 const Burger = () => {
-  const [open, setOpen] = useState(false)
-  
+  const {open, setOpen} = useContext(MyContext);
+  const context = useContext(MyContext);
   return (
     <>
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <StyledBurger isHover={context.hover} open={open} onClick={() => setOpen(!open)}>
         <div />
         <div />
         <div />
@@ -58,4 +63,4 @@ const Burger = () => {
   )
 }
 
-export default Burger
+export default Burger;

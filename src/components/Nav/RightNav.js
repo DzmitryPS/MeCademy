@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import styled from 'styled-components';
 import LogoSrc from './images/Logo.PNG';
 import {Link} from 'react-router-dom';
+import {MyContext} from '../Context/MyContext';
 
 const Ul = styled.ul`
   margin: auto;
@@ -9,14 +10,26 @@ const Ul = styled.ul`
   display: flex;
   width: 60%;
   flex-flow: row nowrap;
-  justify-content: space-around;
-
+  justify-content: flex-start;
+  
+ 
   li {
     padding: 18px 10px;
     letter-spacing: 0.84px;
-    font-family: Teko;
-    font-size: 19px;
+    font-family: 'Yusei Magic', sans-serif;
     height: 100%;
+    transition: 0.3s ease-in;
+
+    :hover{
+      background-color: rgba(249,244,241,1.00);
+      background-color: ${(props) => props.open  &&  'white'} ; 
+    }
+  }
+  
+  a{
+    color: ${(props)=> props.isHover ? 'black' : 'white'};
+    color: ${(props) => props.open  &&  'black'} ; 
+    
   }
   
 
@@ -40,25 +53,26 @@ const Ul = styled.ul`
       height: 25px;
       margin: 5px 15px;
       padding-bottom:25px;
-      border-bottom: 3px solid rgba(249,244,241,1.00);
-      
+      border-bottom: 5px solid rgba(249,244,241,1.00);
     }
-
   
   }
  
-
    .reg_btn{
-    display:none;   
+    display:none; 
+    padding-bottom:35px;
+    border: none; 
+    
     
     @media (max-width: 768px) {
       cursor: pointer;
       display:block;
       height: 40px;
       background-color:#4B9FA5;
-     border-radius: 6px;
+     border-radius: 4px;
      text-align: center;
      padding-top: 6px;
+     margin-top:25px;
      
      color: white;
      transition: background 0.5s ease;
@@ -68,7 +82,6 @@ const Ul = styled.ul`
       background-color:#4ccad4;
     }
 }
-
 
 .reg_btn i{
   margin-left: 15px;
@@ -93,26 +106,26 @@ margin: 10px auto 10px 70px;
 
 @media (max-width: 1000px) {
   margin: 10px auto 10px 70px;
-  
 }
 
 @media (max-width: 768px) {
   margin: 10px auto;
+  padding-left: 35px;
 }
-
 `
-
 
 const RegBtn = styled.button`
     cursor: pointer;
     width: 170px;
     height: 40px;
-    background-color: #4B9FA5;
+    background-color: ${(props)=> props.isHover ? '#4B9FA5' : 'white'};
+    background-color: ${(props) => props.open  &&  '#4B9FA5'} ; 
     border: none;
     border-radius: 50px;
-    font-family: Teko;
+    font-family: 'Yusei Magic', sans-serif;
     font-size: 16px;
-    color: white;
+    color:  ${(props)=> props.isHover ? 'white' : 'black'};
+    color: ${(props) => props.open  &&  'white'} ; 
     letter-spacing: 2px;
     margin-top: 8px;
     margin-right: 70px;
@@ -120,30 +133,39 @@ const RegBtn = styled.button`
 
     @media (max-width: 768px) {
       display: none;
-      
     }
 
     :hover{
       background-color:#4ccad4;
     }
-  
 `;
 
 
 
-const RightNav = ({ open }) => {
+const RightNav = () => {
+
+  const {open, setOpen} = useContext(MyContext);
+  const context = useContext(MyContext);
+
+  const handleClick=()=>{
+    setOpen(!open)
+  }
+  const handleClickOff=()=>{
+    setOpen(false)
+  }
+
   return (
     <>
-    <LogoDiv><Link to='/'><Logo src={LogoSrc} /></Link></LogoDiv>
-    <Ul open={open}>
+    <LogoDiv><Link to='/' onClick={()=>handleClickOff()}><Logo src={LogoSrc} /></Link></LogoDiv>
+    <Ul open={open}  isHover={context.hover}>
       <li className='reg_btn'>Registration<i class="fas fa-arrow-right"></i></li>
-      <li><Link to='/About'>About</Link></li>
-      <li><Link to='/Registration'>Registration</Link></li>
-      <li><Link to='/Couches'>Couches</Link></li>
-      <li><Link to='/Contact'>Contact Us</Link></li>
+      <li><Link to='/About' onClick={()=>handleClick()}>About</Link></li>
+      <li><Link to='/Registration' onClick={()=>handleClick()}>Registration</Link></li>
+      <li><Link to='/Couches' onClick={()=>handleClick()}>Couches</Link></li>
+      <li><Link to='/Program' onClick={()=>handleClick()}>Program</Link></li>
      
     </Ul>
-    <RegBtn>Registration</RegBtn>
+    <RegBtn open={open} isHover={context.hover}>Registration</RegBtn>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import BckgrImg from './img/Banner.png';
+
 
 const StyledDiv = styled.div`
   height: 440px;
@@ -10,6 +10,7 @@ const StyledDiv = styled.div`
   background-position:center;
   background-size: cover;
   margin-top: -55px;
+  
 `
 
 const TopComponent = () => {
