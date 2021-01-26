@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import testImages from './testImages';
 import Arrows from './Arrows';
 import Dots from './Dots';
@@ -14,7 +14,7 @@ function Slider() {
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
-        },7000);
+        },5000);
         return () => clearInterval(interval);
         },[activeIndex]);
 
