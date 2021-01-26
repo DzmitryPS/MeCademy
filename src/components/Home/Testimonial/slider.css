@@ -1,0 +1,127 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+/* :root {
+    --heights: 50vh;
+    --widths: 50%;
+    border: black 1px solid;
+} */
+
+.slider-container {
+    height: 450px;
+    width: 300px;
+    position: relative;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    /* margin: auto; */
+    /* border: black 1px solid; */
+}
+
+.active {
+    display: inline-block;
+    /* border: black 1px solid; */
+}
+
+.inactive {
+    display: none;
+    /* border: black 1px solid; */
+}
+
+.slides {
+    height: 500px;
+    width: 300px;
+    position: relative;
+    /* border: black 1px solid; */
+}
+
+.slide-image {
+    display: block;
+    width: 125px;
+    height: 125px;
+    margin: 20px auto 10px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.26);
+    object-fit: cover;
+}
+
+.slide-name, .slide-title, .slide-text {
+    color: #6b7e88;
+    display: flex;
+    justify-content: center;
+    /* margin: 5px; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* color: black; */
+    /* position: absolute; */
+    /* text-align: center; */
+    /* top: 50%; */
+    /* z-index: 9; */
+    /* border: black 1px solid; */
+}
+.slide-title {
+    margin: 5px;
+}
+
+.slide-text {
+    text-align: center;
+    line-height: 1;
+    margin: 30px;
+    font-family: Open Sans,Arial,sans-serif;
+    /* padding: 40px; */
+    /* top: 70% */
+    /* border: black 1px solid; */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    margin: 10px;
+    /* z-index: 100; */
+    /* width: auto; */
+    /* padding: 1rem; */
+    /* margin-top: -3rem; */
+    /* font-weight: bold; */
+    /* border-radius: 0 2.5px 2.5px 0; */
+}
+
+.prev:hover, .next:hover {
+    color: rgba(0, 0, 0, 0.3);
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    /* transition: all 0.5s ease-in; */
+}
+
+.next {
+    right: 0;
+    /* border-radius: 5px 0 0 5px; */
+}
+
+.all-dots {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    top: 85%;
+    justify-content: center;
+    margin-top: 40px;
+    /* height: 100%; */
+    /* z-index: 200; */
+    /* border: black 1px solid; */
+}
+
+.dot {
+    cursor: pointer;
+    height: 0.5rem;
+    width: 0.5rem;
+    margin: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    /* display: inline-block; */
+}
+
+.active-dot, .dot:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
