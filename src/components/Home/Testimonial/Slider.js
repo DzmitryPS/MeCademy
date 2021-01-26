@@ -3,7 +3,18 @@ import testImages from './testImages';
 import Arrows from './Arrows';
 import Dots from './Dots';
 import SliderContent from './SliderContent';
-import './slider.css';
+import styled from 'styled-components';
+
+const StyledSliderForm = styled.div `
+    
+.slider-container {
+    height: 450px;
+    width: 300px;
+    position: relative;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+`
 
 const len = testImages.length - 1;
 
@@ -19,6 +30,7 @@ function Slider() {
         },[activeIndex]);
 
     return (
+        <StyledSliderForm>
         <div className="slider-container">
             <SliderContent activeIndex={activeIndex} />
             <Arrows 
@@ -33,6 +45,7 @@ function Slider() {
                 onClick={(activeIndex) => setActiveIndex(activeIndex)}
             />
         </div>
+        </StyledSliderForm>
     )
 }
 

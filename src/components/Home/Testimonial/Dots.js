@@ -1,8 +1,36 @@
 import React from 'react';
 import testImages from './testImages';
+import styled from 'styled-components';
+
+const StyledDotsForm = styled.div `
+
+.all-dots {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    top: 85%;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 0.5rem;
+    width: 0.5rem;
+    margin: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+.active-dot, .dot:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+`
+
 
 function Dots(props) {
     return (
+        <StyledDotsForm>
         <div className="all-dots">
             {testImages.map((slide, index) => (
                 <span key={index}
@@ -13,6 +41,7 @@ function Dots(props) {
                 ></span>
             ))}
         </div>
+        </StyledDotsForm>
     )
 }
 
