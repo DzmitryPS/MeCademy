@@ -5,7 +5,7 @@ import './App.css';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Registration from './components/Registration/Registration';
-import Couches from './components/Couches/Couches';
+import Coaches from './components/Coaches/Coaches';
 import Program from './components/Program/Program';
 
 
@@ -24,7 +24,7 @@ function App() {
         render={props=> <Registration {...props}/>}
         />
         <Route path='/Couches'
-        render={props=> <Couches {...props}/>}
+        render={props=> <Coaches {...props}/>}
         />
         <Route path='/Program'
         render={props=> <Program {...props}/>}
