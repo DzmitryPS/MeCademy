@@ -13,15 +13,15 @@ const StyledSliderContentForm = styled.div `
 }
 
 .slides {
-    height: 500px;
+    height: 430px;
     width: 300px;
     position: relative;
 }
 
 .slide-image {
     display: block;
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
     margin: 20px auto 10px;
     border-radius: 50%;
     background-color: white;
