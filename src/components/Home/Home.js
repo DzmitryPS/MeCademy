@@ -38,6 +38,7 @@ const Home = () => {
               
             <MainDiv>
                <Popup/>
+               <Testimonial/>
             </MainDiv>
             
         </div>
