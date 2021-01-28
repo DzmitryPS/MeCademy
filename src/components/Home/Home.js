@@ -2,6 +2,7 @@ import React from 'react';
 import MetaDecorator from '../MetaDecorator/MetaDecorator';
 import styled from 'styled-components';
 import Popup from '../reg_form/Popup_form';
+import Quote from '../molecules/Quote';
 
 
 
@@ -24,7 +25,6 @@ const MainDiv = styled.div`
 `;
 
 
-
 const Home = () => {
 
     
@@ -36,7 +36,7 @@ const Home = () => {
              />
              <TopDiv>
              </TopDiv>
-              
+            <Quote />  
             <MainDiv>
                <Popup/>
             </MainDiv>
