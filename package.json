@@ -17,10 +17,7 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-<<<<<<< HEAD
     "react-typeform-embed": "^0.2.1",
-=======
->>>>>>> 96527450dd1eeb177085bc81ee2bf0f28b54dd7e
     "react-slick": "^0.28.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.1",
