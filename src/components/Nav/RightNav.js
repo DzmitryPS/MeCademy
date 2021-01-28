@@ -157,7 +157,7 @@ const RightNav = () => {
       <li className='reg_btn'>Registration<i class="fas fa-arrow-right"></i></li>
       <li><Link to='/About' onClick={()=>handleClick()}>About</Link></li>
       <li><Link to='/Registration' onClick={()=>handleClick()}>Registration</Link></li>
-      <li><Link to='/Couches' onClick={()=>handleClick()}>Couches</Link></li>
+      <li><Link to='/Coaches' onClick={()=>handleClick()}>Coaches</Link></li>
       <li><Link to='/Program' onClick={()=>handleClick()}>Program</Link></li>
      
     </Ul>

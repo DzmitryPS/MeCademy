@@ -10,7 +10,7 @@ import Program from './components/Program/Program';
 
 
 function App() {
-  return (
+  return ( /// name="" showname=true 
     <div className="App">
       <Navbar />
       <Switch>
@@ -22,8 +22,9 @@ function App() {
         />
        <Route path='/Registration'
         render={props=> <Registration {...props}/>}
-        />
-        <Route path='/Couches'
+        />.
+        
+        <Route path='/Coaches'
         render={props=> <Coaches {...props}/>}
         />
         <Route path='/Program'
