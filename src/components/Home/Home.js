@@ -2,7 +2,8 @@ import React from 'react';
 import MetaDecorator from '../MetaDecorator/MetaDecorator';
 import styled from 'styled-components';
 import Testimonial from './Testimonial/Testimonial';
-import Popup from '../reg_form/Popup_form';
+import MecademyReg from './MecademyReg';
+
 
 
 
@@ -20,8 +21,21 @@ position:relative;
 `;
 
 const MainDiv = styled.div`
- position:relative;
- margin: auto;
+  position:relative;
+  margin-top: 50px;
+
+  .home__form{
+  display: flex;
+  justify-content:space-evenly;
+  margin-top: 50px;
+
+  @media screen and (max-width: 751px){
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  }}
+
 `;
 
 
@@ -37,8 +51,10 @@ const Home = () => {
              </TopDiv>
               
             <MainDiv>
-               <Popup/>
+                <div className='home__form'>
                <Testimonial/>
+               <MecademyReg/>
+               </div>
             </MainDiv>
             
         </div>
