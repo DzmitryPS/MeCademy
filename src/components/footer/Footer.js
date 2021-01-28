@@ -23,7 +23,7 @@ height:100%;
  list-style: none;
  margin: auto;
  position: relative;
- margin-left: ${(props)=> props.icon ? 'auto' : '140px'};
+ margin-left: ${(props)=> props.icon ? 'auto' : '190px'};
  align-items: center;
  flex-wrap: nowrap;
 
