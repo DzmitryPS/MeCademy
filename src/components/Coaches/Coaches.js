@@ -7,6 +7,8 @@ import Slider from "react-slick";
 
 const CoachDiv = styled.div`
     padding-top : 20px;
+    margin-left : 10px;
+    margin-right : 10px;
 `
 const CarouselDiv = styled.div`
     height : 500px;
@@ -68,54 +70,16 @@ class SlickCarousel extends Component {
         return (
           <div>
             <Slider {...settings}>
+                {[1,2,3,4,5,6,7,8,9,10].map(element => (
                 <CoachDiv>
-                    <Img src="https://via.placeholder.com/400x250" alt=""/>
+                    <Img src={"https://via.placeholder.com/400x250.png?text="+ element} alt=""/>
                     <TextDiv>
                         <h2>Name Lastname</h2>
                         <p><strong>Role, another role, also role</strong></p>
                         <p>Bacon ipsum dolor amet short loin short ribs strip steak, bresaola turducken shankle chuck andouille picanha pork loin kevin. Meatball ground round beef ribs drumstick. Swine short loin beef ribs, bacon biltong burgdoggen</p>
                     </TextDiv>   
                 </CoachDiv>
-                <CoachDiv>
-                    <Img src="https://via.placeholder.com/400x250" alt=""/>
-                    <TextDiv>
-                        <h2>Name Lastname</h2>
-                        <p><strong>Role, another role, also role</strong></p>
-                        <p>Bacon ipsum dolor amet short loin short ribs strip steak, bresaola turducken shankle chuck andouille picanha pork loin kevin. Meatball ground round beef ribs drumstick. Swine short loin beef ribs, bacon biltong burgdoggen</p>
-                    </TextDiv>   
-                </CoachDiv>
-                <CoachDiv>
-                    <Img src="https://via.placeholder.com/400x250" alt=""/>
-                    <TextDiv>
-                        <h2>Name Lastname</h2>
-                        <p><strong>Role, another role, also role</strong></p>
-                        <p>Bacon ipsum dolor amet short loin short ribs strip steak, bresaola turducken shankle chuck andouille picanha pork loin kevin. Meatball ground round beef ribs drumstick. Swine short loin beef ribs, bacon biltong burgdoggen</p>
-                    </TextDiv>   
-                </CoachDiv>
-                <CoachDiv>
-                    <Img src="https://via.placeholder.com/400x250" alt=""/>
-                    <TextDiv>
-                        <h2>Name Lastname</h2>
-                        <p><strong>Role, another role, also role</strong></p>
-                        <p>Bacon ipsum dolor amet short loin short ribs strip steak, bresaola turducken shankle chuck andouille picanha pork loin kevin. Meatball ground round beef ribs drumstick. Swine short loin beef ribs, bacon biltong burgdoggen</p>
-                    </TextDiv>   
-                </CoachDiv>
-                <CoachDiv>
-                    <Img src="https://via.placeholder.com/400x250" alt=""/>
-                    <TextDiv>
-                        <h2>Name Lastname</h2>
-                        <p><strong>Role, another role, also role</strong></p>
-                        <p>Bacon ipsum dolor amet short loin short ribs strip steak, bresaola turducken shankle chuck andouille picanha pork loin kevin. Meatball ground round beef ribs drumstick. Swine short loin beef ribs, bacon biltong burgdoggen</p>
-                    </TextDiv>   
-                </CoachDiv>
-                <CoachDiv>
-                    <Img src="https://via.placeholder.com/400x250" alt=""/>
-                    <TextDiv>
-                        <h2>Name Lastname</h2>
-                        <p><strong>Role, another role, also role</strong></p>
-                        <p>Bacon ipsum dolor amet short loin short ribs strip steak, bresaola turducken shankle chuck andouille picanha pork loin kevin. Meatball ground round beef ribs drumstick. Swine short loin beef ribs, bacon biltong burgdoggen</p>
-                    </TextDiv>   
-                </CoachDiv>
+                ))}
             </Slider>
           </div>
         );
