@@ -7,7 +7,7 @@ import About from './components/About/About';
 import Registration from './components/Registration/Registration';
 import Couches from './components/Couches/Couches';
 import Program from './components/Program/Program';
-
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
         render={props=> <Program {...props}/>}
         />
       </Switch>
-      
+      <Footer/>
     </div>
   );
 }
