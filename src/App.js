@@ -7,7 +7,7 @@ import About from './components/About/About';
 import Registration from './components/Registration/Registration';
 import Coaches from './components/Coaches/Coaches';
 import Program from './components/Program/Program';
-
+import Footer from './components/footer/Footer';
 
 function App() {
   return ( /// name="" showname=true 
@@ -31,7 +31,7 @@ function App() {
         render={props=> <Program {...props}/>}
         />
       </Switch>
-      
+      <Footer/>
     </div>
   );
 }

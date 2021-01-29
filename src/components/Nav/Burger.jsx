@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import RightNav from './RightNav';
 import {MyContext} from '../Context/MyContext';
